@@ -24,7 +24,7 @@ def filter_data(data, column, values):
     return data[data[column].isin(values)]
 
 # Load data from a CSV file located at the specified path
-data_path = "C:/Users/david/OneDrive - Bentley University/CS230/pythonProject/Final Project/starbucks_10000_sample.csv"
+data_path = "starbucks_10000_sample.csv"
 df_starbucks = load_data(data_path)
 
 df_starbucks.rename(columns={"Latitude": "lat", "Longitude": "lon"}, inplace=True)
@@ -50,7 +50,7 @@ if selected_cities:
     filtered_data = filter_data(filtered_data, 'City', selected_cities)
 
 # [ST4] Display logo
-logo_path = "C:/Users/david/OneDrive - Bentley University/CS230/pythonProject/Final Project/starbucks_logo.png"
+logo_path = "starbucks_logo.png"
 st.image(logo_path, width=100)
 
 # Setup tabs
